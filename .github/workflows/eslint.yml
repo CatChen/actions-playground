@@ -14,9 +14,12 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: yarn install
+        check-latest: true
+    
+    - name: Yarn
+      run: yarn install
 
-    - name: Action ESLint
+    - name: ESLint
       uses: sibiraj-s/action-eslint@v2.1.1
       with:
         bin-path: ./node_modules/.bin
