@@ -1,0 +1,15 @@
+name: ESLint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Action ESLint
+      uses: sibiraj-s/action-eslint@v2.1.1
