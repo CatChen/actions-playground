@@ -19,6 +19,8 @@ jobs:
     - name: Yarn
       run: yarn install
 
+    - uses: CatChen/eslint-suggestion-action@v1.0.7
+
     - name: ESLint
       uses: sibiraj-s/action-eslint@v2.1.1
       with:
